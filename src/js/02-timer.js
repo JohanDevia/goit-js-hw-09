@@ -28,7 +28,7 @@ const options = {
     const selectedDate = selectedDates[0];
 
     if (selectedDate < new Date()) {
-      alert('Please choose a date in the future');
+      alert('Please choose a date in the future', 'error');
       return;
     }
     button.classList.remove('disabled');
@@ -58,7 +58,7 @@ function startCountdown() {
 
     if (msDiff <= 0) {
       clearInterval(intervalId);
-      alert('Countdown finished!');
+      alert('Countdown finished!', 'success');
     }
   }, 1000);
 }
